@@ -1,5 +1,6 @@
+// Own Header
 #include "Temperature_Sensor.h"
-
+//Additional libraries needed for implementation
 #include <Arduino.h>
 
 // Constructor: Initializes the temperature sensor with the specified pin.
