@@ -1,11 +1,11 @@
 //Prevents reddefinition if not defined
 #ifndef TEMPERATURE_SENSOR_H
-//define
+//Define
 #define TEMPERATURE_SENSOR_H
 
+//Libraries needed for declaration
 #include <OneWire.h>
 #include <DallasTemperature.h>
-
 
 class TemperatureSensor {
    // Member Variable Interface 
