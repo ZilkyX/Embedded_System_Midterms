@@ -1,4 +1,4 @@
-//Prevents reddefinition if not defined
+//Prevents redefinition if not defined
 #ifndef TDS_H
 //Define
 #define TDS_H
