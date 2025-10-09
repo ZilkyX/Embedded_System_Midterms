@@ -5,7 +5,7 @@
 
 #include <OneWire.h>
 #include <DallasTemperature.h>
-#include <Arduino.h>
+
 
 class TemperatureSensor {
    // Member Variable Interface 
