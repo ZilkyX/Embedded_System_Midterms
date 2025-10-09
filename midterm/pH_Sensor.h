@@ -1,9 +1,7 @@
 //Prevents reddefinition if not defined
 #ifndef PH_H 
-//define
+//Define
 #define PH_H 
-
-#include <Arduino.h>
 
 class PHSensor {
   //Member Function Interface
