@@ -8,12 +8,13 @@
 #include <Arduino.h>
 
 class TemperatureSensor {
-  //Member Function Interface  
+   // Member Variable Interface 
   private:
     byte _pin;
     OneWire* _oneWire;
     DallasTemperature* _sensors;
-   // Member Variable Interface
+   
+  //Member Function Interface  
   public:
     TemperatureSensor(byte pin);
     void begin();
