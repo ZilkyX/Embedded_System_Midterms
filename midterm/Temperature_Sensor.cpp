@@ -1,5 +1,7 @@
 #include "Temperature_Sensor.h"
 
+#include <Arduino.h>
+
 // Constructor: Initializes the temperature sensor with the specified pin.
 TemperatureSensor::TemperatureSensor(byte pin) {
   _pin = pin;
