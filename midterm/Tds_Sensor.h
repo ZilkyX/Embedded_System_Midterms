@@ -1,9 +1,7 @@
 //Prevents reddefinition if not defined
 #ifndef TDS_H
-//define
+//Define
 #define TDS_H
-
-#include <Arduino.h>
 
 class TDSSensor {
   //Member Function Interface
