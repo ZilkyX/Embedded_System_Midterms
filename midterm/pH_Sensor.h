@@ -1,4 +1,4 @@
-//Prevents reddefinition if not defined
+//Prevents redefinition if not defined
 #ifndef PH_H 
 //Define
 #define PH_H 
