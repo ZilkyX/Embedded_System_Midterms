@@ -23,6 +23,7 @@ int TDSSensor::getMedianNum(int bArray[], int filterLen) {
   for (int i = 0; i < filterLen; i++)
     bTab[i] = bArray[i];
   int i, j, bTemp;
+  // Bubble sort: Swap adjacent elements if out of order.
   for (j = 0; j < filterLen - 1; j++) {
     for (i = 0; i < filterLen - j - 1; i++) {
       if (bTab[i] > bTab[i + 1]) {
@@ -32,6 +33,8 @@ int TDSSensor::getMedianNum(int bArray[], int filterLen) {
       }
     }
   }
+
+  // Return median: Middle value (odd) or average of two middles (even).
   if ((filterLen & 1) > 0) {
     bTemp = bTab[(filterLen - 1) / 2];
   } else {
@@ -59,8 +62,10 @@ float TDSSensor::getTDS(float temperature) {
       _analogBufferTemp[i] = _analogBuffer[i];
     }
 
+    // Median voltage: Scale ADC to volts.
     float averageVoltage = getMedianNum(_analogBufferTemp, _scount) * _vref / 1024.0;
 
+    // Temp compensation: Normalize to 25°C (2% per °C adjustment).
     float compensationCoefficient = 1.0 + 0.02 * (temperature - 25.0);
     float compensationVoltage = averageVoltage / compensationCoefficient;
 
