@@ -1,4 +1,5 @@
 #include "pH_Sensor.h"
+#include <Arduino.h>
 
 // Constructor: Initialize pH sensor with pin and calibration value
 PHSensor::PHSensor(byte pin, float calibrationValue) {
