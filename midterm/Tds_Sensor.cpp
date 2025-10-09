@@ -9,10 +9,12 @@ TDSSensor::TDSSensor(byte pin, float vref, int scount) {
   _analogBufferIndex = 0;
 }
 
+// Initializes the sensor pin as input.
 void TDSSensor::begin() {
   pinMode(_pin, INPUT);
 }
 
+// Computes the median value from an array of integers for noise filtering.
 int TDSSensor::getMedianNum(int bArray[], int filterLen) {
   int bTab[filterLen];
   for (int i = 0; i < filterLen; i++)
@@ -35,6 +37,7 @@ int TDSSensor::getMedianNum(int bArray[], int filterLen) {
   return bTemp;
 }
 
+// Reads analog values, computes median voltage, applies temperature compensation, and calculates TDS value in ppm.
 float TDSSensor::getTDS(float temperature) {
   static unsigned long analogSampleTime = millis();
   if (millis() - analogSampleTime > 40U) {
