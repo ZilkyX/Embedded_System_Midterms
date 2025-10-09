@@ -1,9 +1,10 @@
-#include <OneWire.h>
-#include <DallasTemperature.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
-#include "Temperature_Sensor.h"
-#include "config.h"
+// Library Imports
+#include <OneWire.h> // Library for 1-Wire protocol
+#include <DallasTemperature.h> // Library for Dallas temperature sensors
+#include <Adafruit_GFX.h> // Adafruit graphics library
+#include <Adafruit_SSD1306.h> // Adafruit SSD1306 OLED display driver
+#include "Temperature_Sensor.h" // Custom header for TemperatureSensor class
+#include "config.h"  // Custom project config
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 TemperatureSensor tempSensor(DS18B20_PIN);
