@@ -1,9 +1,9 @@
-
-#include "Tds_Sensor.h"
-#include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
-#include "config.h"
+// Library Imports
+#include "Tds_Sensor.h" // Custom header for TDSSensor class
+#include <Wire.h> // Arduino I²C communication librar
+#include <Adafruit_GFX.h> // Adafruit graphics library
+#include <Adafruit_SSD1306.h> // Adafruit SSD1306 OLED display driver
+#include "config.h"  // Custom project config
 
 TDSSensor tds(TDS_PIN);
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
