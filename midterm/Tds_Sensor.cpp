@@ -1,5 +1,6 @@
+// Own Header
 #include "Tds_Sensor.h"
-
+//Additional libraries needed for implementation
 #include <Arduino.h>
 
 // Constructor: Initializes the TDS sensor with pin, reference voltage, and sample count.
