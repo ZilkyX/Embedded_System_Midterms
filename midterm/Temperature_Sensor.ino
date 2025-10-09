@@ -8,6 +8,8 @@
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 TemperatureSensor tempSensor(DS18B20_PIN);
 
+// Initializes serial, temperature sensor, and OLED display.
+// Shows startup message on display.
 void setup() {
   Serial.begin(9600);
 
@@ -27,6 +29,7 @@ void setup() {
   delay(1000);
 }
 
+// Reads temperatures in C and F, prints to serial, and updates OLED display.
 void loop() {
   float tempC = tempSensor.getCelsius();
   float tempF = tempSensor.getFahrenheit();
