@@ -1,5 +1,7 @@
 #include "Tds_Sensor.h"
 
+#include <Arduino.h>
+
 TDSSensor::TDSSensor(byte pin, float vref, int scount) {
   _pin = pin;
   _vref = vref;
