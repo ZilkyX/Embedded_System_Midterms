@@ -1,4 +1,4 @@
-//Prevents reddefinition if not defined
+//Prevents redefinition if not defined
 #ifndef TEMPERATURE_SENSOR_H
 //Define
 #define TEMPERATURE_SENSOR_H
