@@ -2,6 +2,7 @@
 
 #include <Arduino.h>
 
+// Constructor: Initializes the TDS sensor with pin, reference voltage, and sample count.
 TDSSensor::TDSSensor(byte pin, float vref, int scount) {
   _pin = pin;
   _vref = vref;
