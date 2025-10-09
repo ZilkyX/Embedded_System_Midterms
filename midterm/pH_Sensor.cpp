@@ -1,4 +1,6 @@
+// Own Header
 #include "pH_Sensor.h"
+//Additinal libraries needed for implementation
 #include <Arduino.h>
 
 // Constructor: Initialize pH sensor with pin and calibration value
