@@ -1,13 +1,17 @@
-#ifndef PH_H
-#define PH_H
+//Prevents reddefinition if not defined
+#ifndef PH_H 
+//define
+#define PH_H 
 
 #include <Arduino.h>
 
 class PHSensor {
+  //Member Function Interface
   public:
     PHSensor(byte pin, float calibrationValue = 22.34);
     float getPH();
 
+  // Member Variable Interface
   private:
     byte _pin;
     float _calibrationValue;
